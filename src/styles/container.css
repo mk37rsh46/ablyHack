@@ -1,0 +1,7 @@
+.live-cursors-container {
+  @apply w-full flex justify-center items-center relative;
+
+  /* background-color: #2596be  ; */
+  background-color: #2d2d2d;
+  height: 100vh;
+}
