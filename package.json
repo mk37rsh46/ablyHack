@@ -1,5 +1,5 @@
 {
-  "name": "@ably-labs/vite-live-cursors",
+  "name": "@ably-hack",
   "license": "Apache-2.0",
   "private": true,
   "version": "1.0.0",
@@ -27,6 +27,7 @@
     "react-codemirror2": "^7.3.0",
     "react-dom": "^18.0.0",
     "react-icons": "^4.11.0",
+    "react-router-dom": "^6.18.0",
     "react-split": "^2.0.14",
     "vm2": "^3.9.19"
   },

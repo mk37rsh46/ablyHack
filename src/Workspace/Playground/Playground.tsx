@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {ably, spaces} from '../../services/ablyService'
+import {ably1, spaces} from '../../services/ablyService'
 import PreferenceNav from './PreferenceNav/PreferenceNav';
 import Split from "react-split";
 import CodeMirror, { ViewUpdate } from '@uiw/react-codemirror';
@@ -11,6 +11,10 @@ import { AiOutlineSetting, AiOutlineFullscreen } from 'react-icons/ai';
 import { FiUsers } from "react-icons/fi";
 import EmojiReactions from '../../components/EmojiReactions';
 import { SpacesProvider } from '@ably/spaces/dist/mjs/react';
+import { useContext } from 'react';
+import {useParams} from 'react-router-dom';
+import { Realtime } from 'ably';
+import Spaces from '@ably/spaces';
 
 
 
@@ -19,9 +23,16 @@ type PlaygroundProps = {
 };
 
 const Playground:React.FC<PlaygroundProps> = () => {
+  let {name } = useParams();
+  name = name!.charAt(0).toUpperCase() + name!.slice(1);
+
   const boilerPlate = `function twoSums(nums, target){
     //Write your own code here
-  }`;  
+  }`;  const ably = new Realtime.Promise({ key: '3dOKCA.FRENYQ:K1rXvegOdg2Pt4wJF33w29I-gJKvH35QSvS0DbAjLoY', clientId: name});
+  const generateTokenForUser = (userId: any) => {
+      return ably.auth.createTokenRequest({ clientId: userId });
+    };
+  const spaces = new Spaces(ably);
   const [result, setResult] = useState("TESTING");
   const [text, setText] = useState(boilerPlate);
     const channel = ably.channels.get('textbox-channel');
@@ -79,7 +90,7 @@ const Playground:React.FC<PlaygroundProps> = () => {
 			<div className='flex items-center text-white'>
 				<button className='flex cursor-pointer items-center rounded focus:outline-none bg-dark-fill-3 text-dark-label-2 hover:bg-dark-fill-2  px-2 py-1.5 font-medium'>
 					<div className='flex items-center px-1'>
-						<div className='text-xs text-label-2 dark:text-dark-label-2'>JavaScript</div>
+						<div className='text-xs text-label-2 dark:text-dark-label-2'>JavaScript </div>
 					</div>
 				</button>
 			</div>

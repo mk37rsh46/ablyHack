@@ -7,7 +7,7 @@ import Playground from './Playground/Playground';
 type WorkspaceProps = {};
 
 const Workspace: React.FC<WorkspaceProps> = () => {
-    return <Split className="split"  minSize={0}>
+    return  <Split className="split"  minSize={0}>
         <ProblemDescription/>
         <Playground/>
         

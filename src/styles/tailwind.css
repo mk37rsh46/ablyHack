@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 /* RESET */
 * {
 	box-sizing: border-box;
@@ -103,3 +104,19 @@ code {
 	font-size: 1rem;
 }
 
+
+@keyframes moveGradient {
+	0% {
+	  background-position: 100% 0;
+	}
+	100% {
+	  background-position: 0 0;
+	}
+  }
+  
+  .animate-gradient {
+	animation: moveGradient 10s linear infinite;
+	background: linear-gradient(270deg, #1A202C, #2D3748, #1A202C, #2D3748, #1A202C);
+	background-size: 1000% 1000%;
+  }
+  

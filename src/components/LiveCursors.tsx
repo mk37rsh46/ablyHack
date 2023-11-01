@@ -7,12 +7,19 @@ import { MemberCursors, YourCursor } from "./Cursors";
 import type { Member } from "../utils/types";
 import TextBox from "./TextBox";
 import Workspace from "../Workspace/Workspace";
+import { useParams } from "react-router-dom";
+import { Realtime } from "ably";
 
 /** 💡 Select a mock name to assign randomly to a new user that enters the space💡 */
 const mockName = () => mockNames[Math.floor(Math.random() * mockNames.length)];
 
 const LiveCursors = () => {
-  const name = useMemo(mockName, []);
+  let {name} = useParams()
+  name = name!.charAt(0).toUpperCase() + name!.slice(1);
+  const ably = new Realtime.Promise({ key: '3dOKCA.FRENYQ:K1rXvegOdg2Pt4wJF33w29I-gJKvH35QSvS0DbAjLoY', clientId:name });
+  const generateTokenForUser = (userId: any) => {
+      return ably.auth.createTokenRequest({ clientId: userId });
+    };
   /** 💡 Select a color to assign randomly to a new user that enters the space💡 */
   const userColors = useMemo(
     () => colours[Math.floor(Math.random() * colours.length)],

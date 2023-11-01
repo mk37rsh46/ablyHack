@@ -411,6 +411,11 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@remix-run/router@1.11.0":
+  version "1.11.0"
+  resolved "https://registry.npmjs.org/@remix-run/router/-/router-1.11.0.tgz"
+  integrity sha512-BHdhcWgeiudl91HvVa2wxqZjSHbheSgIiDvxrF1VjFzBzpTtuDPkOdOi3Iqvc08kXtFkLjhbS+ML9aM8mJS+wQ==
+
 "@sindresorhus/is@^4.0.0":
   version "4.6.0"
   resolved "https://registry.npmjs.org/@sindresorhus/is/-/is-4.6.0.tgz"
@@ -1776,7 +1781,7 @@ react-codemirror2@^7.3.0:
   resolved "https://registry.npmjs.org/react-codemirror2/-/react-codemirror2-7.3.0.tgz"
   integrity sha512-gCgJPXDX+5iaPolkHAu1YbJ92a2yL7Je4TuyO3QEqOtI/d6mbEk08l0oIm18R4ctuT/Sl87X63xIMBnRQBXYXA==
 
-react-dom@^18.0.0, react-dom@>=16.8.0:
+react-dom@^18.0.0, react-dom@>=16.8, react-dom@>=16.8.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   integrity sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==
@@ -1799,6 +1804,21 @@ react-refresh@^0.14.0:
   resolved "https://registry.npmjs.org/react-refresh/-/react-refresh-0.14.0.tgz"
   integrity sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ==
 
+react-router-dom@^6.18.0:
+  version "6.18.0"
+  resolved "https://registry.npmjs.org/react-router-dom/-/react-router-dom-6.18.0.tgz"
+  integrity sha512-Ubrue4+Ercc/BoDkFQfc6og5zRQ4A8YxSO3Knsne+eRbZ+IepAsK249XBH/XaFuOYOYr3L3r13CXTLvYt5JDjw==
+  dependencies:
+    "@remix-run/router" "1.11.0"
+    react-router "6.18.0"
+
+react-router@6.18.0:
+  version "6.18.0"
+  resolved "https://registry.npmjs.org/react-router/-/react-router-6.18.0.tgz"
+  integrity sha512-vk2y7Dsy8wI02eRRaRmOs9g2o+aE72YCx5q9VasT1N9v+lrdB79tIqrjMfByHiY5+6aYkH2rUa5X839nwWGPDg==
+  dependencies:
+    "@remix-run/router" "1.11.0"
+
 react-split@^2.0.14:
   version "2.0.14"
   resolved "https://registry.npmjs.org/react-split/-/react-split-2.0.14.tgz"
@@ -1807,7 +1827,7 @@ react-split@^2.0.14:
     prop-types "^15.5.7"
     split.js "^1.6.0"
 
-react@*, react@^18.0.0, react@^18.2.0, "react@>= 16", "react@>=15.5 <=17.x", react@>=16.8.0:
+react@*, react@^18.0.0, react@^18.2.0, "react@>= 16", "react@>=15.5 <=17.x", react@>=16.8, react@>=16.8.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==

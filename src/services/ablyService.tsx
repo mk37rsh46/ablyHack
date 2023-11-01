@@ -3,15 +3,15 @@
 import { Realtime } from "ably";
 import Spaces from "@ably/spaces";
 import { SpacesProvider, SpaceProvider } from "@ably/spaces/react";
-const ably = new Realtime.Promise({ key: 'Vitqqg.Evnceg:Z-60FDCVJNiy-qDoItb0_GwsWAByDvLFlLrHl1dTN7Q', clientId: (Math.random() * 9000).toString() });
+const ably1 = new Realtime.Promise({ key: '3dOKCA.FRENYQ:K1rXvegOdg2Pt4wJF33w29I-gJKvH35QSvS0DbAjLoY', clientId: (Math.random() * 9000).toString() });
 const generateTokenForUser = (userId: any) => {
-    return ably.auth.createTokenRequest({ clientId: userId });
+    return ably1.auth.createTokenRequest({ clientId: userId });
   };
-const spaces = new Spaces(ably);
+const spaces = new Spaces(ably1);
 
   
-  
+   
 
 
-  export { ably, generateTokenForUser, spaces};
-export default ably;
+  export { ably1, generateTokenForUser, spaces};
+export default ably1;
