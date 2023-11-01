@@ -28,7 +28,7 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = () => {
 						<div className='text-white text-sm'>
 							<p className='mt-3'>
 								Given an array of integers <code>nums</code> and an integer <code>target</code>, return 
-								<em> the indices of the two numbers such that they add up to</em> <code>target</code>.
+								<em> the indices </em> of the two numbers such that they add up to <code>target</code>.
 							</p>
 							<p className='mt-3'>
 								You may assume that each input would have <strong>exactly one solution</strong>, and you
@@ -93,9 +93,11 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = () => {
 								</li>
 								<li className='mt-2 text-sm'>
 									<strong>Only one valid answer exists.</strong>
+
 								</li>
 							</ul>
 						</div>
+						<br></br>
 					</div>
 				</div>
 			</div>

@@ -31,8 +31,8 @@ const YourCursor = ({
       className="absolute"
       onMouseMove={(e) => handleSelfCursorMove(e)}
       style={{
-        top: `${cursorPosition.top}px`,
-        left: `${cursorPosition.left+ 20}px`,
+        top: `${cursorPosition.top + 60}px`,
+        left: `${cursorPosition.left}px`,
 
       }}
     >

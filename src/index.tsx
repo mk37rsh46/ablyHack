@@ -6,7 +6,6 @@ import { Realtime } from "ably";
 
 import App from "./App";
 
-import "./styles/container.css";
 import "./styles/tailwind.css";
 
 const client = new Realtime.Promise({
