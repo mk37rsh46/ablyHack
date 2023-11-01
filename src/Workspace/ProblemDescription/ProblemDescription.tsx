@@ -1,9 +1,11 @@
 
 
+import  Split from 'react-split';
 type ProblemDescriptionProps = {};
 
 const ProblemDescription: React.FC<ProblemDescriptionProps> = () => {
 	return (
+<div className="w-full overflow-auto bg-dark-layer-1" >
 		<div className='bg-dark-layer-1'>
 			{/* TAB */}
 			<div className='flex h-11 w-full items-center pt-2 bg-dark-layer-2 text-white overflow-x-hidden'>
@@ -32,7 +34,7 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = () => {
 							</p>
 							<p className='mt-3'>
 								You may assume that each input would have <strong>exactly one solution</strong>, and you
-								may not use thesame element twice.
+								may not use the same element twice.
 							</p>
 							<p className='mt-3'>You can return the answer in any order.</p>
 						</div>
@@ -102,6 +104,8 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = () => {
 				</div>
 			</div>
 		</div>
+
+	</div>
 	);
 };
 export default ProblemDescription;

@@ -42,9 +42,9 @@ const handleCopyClick = () => {
         Your Problems
   </h1>
   <button
-  className="block mx-auto text-lg text-center text-white font-medium mt-5 mb-3 bg-green-800 hover:bg-green-700 font-semibold px-2 py-1 rounded-full transition duration-300 ease-in-out hover:scale-105"
+  className="block mx-auto text-base text-center text-white font-medium mt-5 mb-3 bg-green-800 hover:bg-green-700 font-semibold px-2 py-1 rounded-full transition duration-300 ease-in-out hover:scale-105"
 >
-  Create a new one
+  Create a new problem
 </button>
 
 

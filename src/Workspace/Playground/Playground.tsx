@@ -28,12 +28,12 @@ const Playground:React.FC<PlaygroundProps> = () => {
 
   const boilerPlate = `function twoSums(nums, target){
     //Write your own code here
-  }`;  const ably = new Realtime.Promise({ key: '3dOKCA.FRENYQ:K1rXvegOdg2Pt4wJF33w29I-gJKvH35QSvS0DbAjLoY', clientId: name});
+  }`;  const ably = new Realtime.Promise({ key: 'ewHhiQ.nDNboA:gWz9rR-5oZLD3WZGuYP04p-YVX3Pdvi2ylil2c6A_5Y', clientId: name});
   const generateTokenForUser = (userId: any) => {
       return ably.auth.createTokenRequest({ clientId: userId });
     };
   const spaces = new Spaces(ably);
-  const [result, setResult] = useState("TESTING");
+  const [result, setResult] = useState("No code has been run yet.");
   const [text, setText] = useState(boilerPlate);
     const channel = ably.channels.get('textbox-channel');
     const runUserFunction = () => {
